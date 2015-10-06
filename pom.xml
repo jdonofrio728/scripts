@@ -9,6 +9,7 @@
   <properties>
     <version.jython>2.5.3</version.jython>
     <version.execute>1.4.0</version.execute>
+    <version.assembly>2.5.5</version.assembly>
 
     <!-- Various depdencies -->
     <version.joda.time>2.8.2</version.joda.time>
@@ -50,6 +51,24 @@
             <arguments>
               <argument>${scriptName}</argument>
             </arguments>
+          </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${version.assembly}</version>
+          <executions>
+            <execution>
+              <id>make-assembly</id>
+              <phase>package</phase>
+              <goals>
+                <goal>single</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <descriptors>
+              <descriptor>assembly.xml</descriptor>
+            </descriptors>
           </configuration>
         </plugin>
       </plugins>
