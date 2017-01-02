@@ -29,8 +29,6 @@ ps = db.getRootGroup().GetEntries(True).GetAt(0).getStrings().Get("Password")
 print ps
 print ps.ReadString()
 
-#kdbx = KdbxFile(db)
-#kdbx.Load("/home/jdonofrio/Dropbox/Master.kdbx", KdbxFormat.Default, None)
 db.Close()
 
 print "Done"
